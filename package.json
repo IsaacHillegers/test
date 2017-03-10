@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/IsaacHillegers/test/issues"
   },
-  "homepage": "https://github.com/IsaacHillegers/test#readme"
+  "homepage": "https://github.com/IsaacHillegers/test#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "johnny-five": "^0.10.6",
+    "socket.io": "^1.7.3"
+  }
 }
