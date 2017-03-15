@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <h1>Assignment One</h1>
+        
+        <h2>Led Control<h2>
+
+        <input type="button" value="ON" id="onButton" />
+        <input type="button" value="OFF" id="offButton" />
+        
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8080');
+
+            $('#onButton').click(function () {
+                socket.emit('led_on', 'LED turned on');
+            })
+
+            $('#offButton').click(function () {
+                socket.emit('led_off', 'LED turned off');
+            })
+        </script>
+    </body>
+</html>
